@@ -89,7 +89,7 @@ jobs:
           $artifact = $artifacts.artifacts | Where-Object { $_.name -eq "DHBW Game" }
       
           if ($artifact -ne $null) {
-            $artifactLink = "https://github.com/$env:REPO/actions/artifacts/$($artifact.id)/zip"
+            $artifactLink = "https://github.com/$env:REPO/actions/artifacts/$($artifact.id)"
             $body = @{
               body = "📦 Das Build-Artifact **DHBW Game** ist verfügbar: [Jetzt herunterladen]($artifactLink)"
             } | ConvertTo-Json
