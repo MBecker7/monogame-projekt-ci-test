@@ -15,11 +15,6 @@ jobs:
       - name: Check out the repo
         uses: actions/checkout@v2
 
-      - name: Set up .NET
-        uses: actions/setup-dotnet@v4
-        with:
-          dotnet-version: '8.0.x'
-
       - name: Build projekt
         run: dotnet build monogame-projekt.csproj --configuration Release
 
@@ -107,5 +102,3 @@ jobs:
             Write-Host "Artifact 'DHBW Game' wurde nicht gefunden."
           }
         shell: pwsh
-
-
